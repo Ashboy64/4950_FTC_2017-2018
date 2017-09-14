@@ -10,7 +10,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
  * Created by rao_a on 8/31/2017.
  */
 @Autonomous(name="First autonomous", group="group")
-@Disabled
 public class testAutonomous extends LinearOpMode {
     DcMotor motorLeft;
     DcMotor motorRight;
@@ -19,12 +18,12 @@ public class testAutonomous extends LinearOpMode {
     int red;
     int green;
     public void runOpMode(){
-        motorLeft = hardwareMap.dcMotor.get("motor1");
-        motorRight = hardwareMap.dcMotor.get("motor2");
+        motorLeft = hardwareMap.dcMotor.get("leftmotor");
+        motorRight = hardwareMap.dcMotor.get("rightmotor");
 
         Move(2000);
 
-        colorSensor1 = hardwareMap.colorSensor.get("colorSensor1");
+        colorSensor1 = hardwareMap.colorSensor.get("colorSensor");
 
         blue = colorSensor1.blue();
         red = colorSensor1.red();
